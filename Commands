@@ -1,0 +1,96 @@
+Git Necessary Commands
+
+1.	Git configuration commands
+
+1.1	git config user.name “name”
+1.2	git config user.email”email”
+
+[1.1] git cofig user.name “name” actually set your user name in you local set up.
+[1.2] git cofig user.name “email” actually set your global email address in you local set up.
+
+
+
+2.	Git Basic commands
+
+
+2.1	mkdir Jahid
+2.2	cd jahid
+2.3	touch jahid.html
+2.4	git init
+2.5	git status
+2.6	git add jahid.html/ git add .
+2.7	git commit -m “my first code”
+
+[2.1]. Jahid is a new directory or folder
+[2.2]. Cd means change directory. Here I change the directory and it goes to the jahid directory
+[2.3]. I create a html file
+[2.4]. Git init means  initializing the git file
+[2.5].git status indicates the current status of git. Here I can see “jahid.html” is currently on working area,which color is red.
+[2.6]. By using “git add jahid.html” we pull the file named “jahid.html” from the working area and push it in the staging area. 
+And also git add . command means all the files located on the working area will be pushed on the staging area.
+[2.7]. git commit -m “my first code” this command actually commit the jahid.html file. The main themes of this command is pull from the staging area and pushed to the commit area. In the quotation we must write the meaningfull commit so that other developer can easily understand where and how the changes are actually occurred.
+
+
+3.	Show the commits(log)
+
+
+3.1	git log
+3.2	git log –oneline
+3.3	git log –name-only
+[3.1] shows the information that you need to know about all the commits
+[3.2] shows the commit
+[3.3] “--name-only” this command is usually shows the commit history along the file name.
+
+
+4.	Branches
+
+4.1	git branch
+4.2	git checkout (branch name)
+4.3	git checkout -b (branch name)
+4.4	git branch -d (branch name)
+
+[4.1] To see all existing branches. And also used to see the list of branches.
+[4.2] switch to an existing branch
+[4.3] create a new branch and switch to it
+[4.4] delete a branch
+
+5.	Merge
+
+
+5.1	git diff (branch name)
+5.2	git merge (branch name)
+[5.1] to compare commits,branches,files & more. Shows the actual difference between two branch
+[5.2] merge to branches 
+
+** we can also merge by PR request. PR means pull request. It lets you tell others about changes you’ve pushed to a branch in a repository on version control system. In your developer team, a senior developer review your pull request that what actually do on your files and if anything wrong he/she can comment on your pull request
+
+6.	Rebase
+
+
+6.1	git rebase master
+6.2	git rebase -I ~HEAD4
+6.3	git cherry-pick jahid
+
+[6.1]We actually copying the commits from one branch to another. It is usually making the branch history linear. Commit hash will be updated the branch
+[6.2] we are telling git that we want to interactively rebase the last 4 commits 
+[6.3] we can have the copy of jahid’s commit on the master branch
+
+7.	Undo changes 
+
+
+7.1	git reset <file name>
+7.2	git reset
+7.3	git reset HEAD~1
+7.4	git reset<commit hash>
+7.5	git reset --hard<commit hash>
+[7.1][7.2] these commands is used for staged changes
+[7.3] commited changes for one commit
+[7.4]delete the commits from version control system
+[7.5] delete the commits from the vcs also deleted commit from the development code
+
+
+
+                            
+
+
+
